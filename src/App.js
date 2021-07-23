@@ -3,12 +3,16 @@ import NavBarComp from "./components/NavbarComp.js";
 import { Header } from "./components/Header.js";
 import { CardComp } from "./components/CardComp.js";
 import { Footer } from "./components/Footer.js";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { CartPanel } from "./components/CartPanel";
 
 function App() {
   const [item, setItem] = useState([]);
   const [show, setShow] = useState("none");
+
+  useEffect(() => {
+    document.title = "Shop in Style";
+  }, []);
 
   return (
     <div className="App">
@@ -16,13 +20,13 @@ function App() {
       <NavBarComp setShow={setShow} item={item} />
 
       {/* Panel for cart */}
-      <CartPanel show={show} setShow={setShow} item={item} />
+      <CartPanel setItem={setItem} show={show} setShow={setShow} item={item} />
 
       {/* Header of the Website */}
       <Header />
 
       {/* Card */}
-      <CardComp show={show} setItem={setItem} item={item} />
+      <CardComp setItem={setItem} item={item} />
 
       {/* Footer */}
       <Footer />

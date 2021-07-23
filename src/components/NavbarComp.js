@@ -13,6 +13,7 @@ import { FaShoppingCart } from "react-icons/fa";
 export default function NavBarComp({ setShow, item }) {
   return (
     <div>
+      {/* Top Navbar with dummy page links */}
       <Container>
         <Navbar expand="lg">
           <Navbar.Brand href="#home">Start Bootstrap</Navbar.Brand>
@@ -30,6 +31,8 @@ export default function NavBarComp({ setShow, item }) {
                 <NavDropdown.Item href="#">New Arrivals</NavDropdown.Item>
               </NavDropdown>
             </Nav>
+
+            {/* Cart button with the badge */}
             <Form inline>
               <Button
                 variant="outline-dark"

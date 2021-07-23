@@ -23,6 +23,7 @@
   text-align: center;
   background-color: #212529;
   color: white;
+  line-height: 1.5;
   height: 18.5rem;
   padding: 0 2rem;
 }
@@ -31,7 +32,6 @@
 .header h1 {
   font-size: 3.5rem;
   font-weight: bolder;
-  margin-bottom: 0;
 }
 
 .header p {
